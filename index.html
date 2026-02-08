@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>海南省高考政策 - 2026年报考指南</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 移动端专用基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: #0077b6;
+            --secondary: #00a8e8;
+            --accent: #f77f00;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #2a9d8f;
+            --warning: #e9c46a;
+            --danger: #e76f51;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f9fc;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 头部样式 - 手机端 */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 1.8rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2017/06/09/13/21/palm-2386594_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .logo-title i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 15px rgba(247, 127, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .header-highlights {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+        }
+
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 0.7rem 1rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .highlight i {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        /* 导航栏 - 手机端 */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+
+        .logo {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn:active {
+            transform: scale(0.95);
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 0;
+            border-radius: 0 0 12px 12px;
+            z-index: 99;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-links li:last-child {
+            border-bottom: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 0.9rem 1.5rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:active {
+            background-color: rgba(0, 119, 182, 0.1);
+            color: var(--primary);
+        }
+
+        /* 主要内容区 - 手机端 */
+        section {
+            padding: 2.5rem 0;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            background-color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* 政策卡片 - 手机端 */
+        .policy-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .policy-card:active {
+            transform: scale(0.98);
+        }
+
+        .card-header {
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .card-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.2rem;
+        }
+
+        .card-content p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .card-content ul {
+            list-style-position: inside;
+            margin-top: 0.8rem;
+            padding-left: 0.5rem;
+        }
+
+        .card-content li {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .card-content strong {
+            color: var(--dark);
+        }
+
+        /* 表格样式 - 手机端 */
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+            display: block;
+            overflow-x: auto;
+        }
+
+        .policy-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.9rem 0.8rem;
+            text-align: left;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .policy-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            font-size: 0.85rem;
+            vertical-align: top;
+        }
+
+        .policy-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .policy-table tr:hover {
+            background-color: #f1f7ff;
+        }
+
+        .policy-table strong {
+            color: var(--primary);
+        }
+
+        /* 时间线 - 手机端 */
+        .timeline {
+            position: relative;
+            padding: 1rem 0;
+            margin: 1.5rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--secondary);
+            opacity: 0.5;
+        }
+
+        .timeline-item {
+            padding-left: 50px;
+            padding-right: 15px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-content {
+            padding: 1.2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .timeline-date i {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* 优势展示 - 手机端 */
+        .advantage {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.2rem;
+        }
+
+        .advantage i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .advantage h3 {
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .advantage p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* 提醒区域 - 手机端 */
+        .reminder-box {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #0077b6, #005a8a);
+            color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .reminder-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .reminder-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .reminder-box p:last-child {
+            margin-top: 0.8rem;
+            font-weight: 700;
+            color: #ffd166;
+        }
+
+        /* 底部样式 - 手机端 */
+        footer {
+            background: linear-gradient(135deg, #1d2b3a, #343a40);
+            color: white;
+            padding: 2rem 0 1.5rem;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.9rem;
+        }
+
+        .footer-section li i {
+            margin-right: 0.6rem;
+            color: var(--accent);
+            margin-top: 2px;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-section a:active {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* 二维码区域 */
+        .qr-section {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-top: 1.5rem;
+        }
+
+        .qr-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .qr-code-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .qr-placeholder {
+            width: 160px;
+            height: 160px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            border: 2px dashed #ccc;
+        }
+
+        .qr-instructions {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.85rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .qr-instructions ol {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .qr-instructions li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .qr-instructions strong {
+            color: var(--primary);
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0.5rem;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.2rem;
+            }
+
+            .card-header i {
+                font-size: 1.5rem;
+            }
+
+            .timeline-date {
+                font-size: 0.85rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .policy-table th, .policy-table td {
+                padding: 0.6rem;
+                font-size: 0.8rem;
+            }
+
+            .reminder-box {
+                padding: 1.2rem;
+            }
+
+            .qr-placeholder {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        /* 触摸反馈 */
+        .policy-card:active, .advantage:active, .timeline-content:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* 隐藏桌面端元素 */
+        @media (min-width: 769px) {
+            .desktop-only {
+                display: block;
+            }
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-only {
+                display: none;
+            }
+            .mobile-only {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-title">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h1>海南省高考政策</h1>
+                    <p class="subtitle">2026年报考指南 - 自贸港背景下的多元升学路径</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.9rem; margin-bottom: 1rem;">海南省作为自由贸易港，拥有清晰、友好且多元的高考政策体系，为本地及外省考生提供多种升学路径。</p>
+
+            <div class="header-highlights">
+                <div class="highlight">
+                    <i class="fas fa-check-circle"></i>
+                    <span>政策清晰多元</span>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-user-friends"></i>
+                    <span>条件相对友好</span>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-star"></i>
+                    <span>人才待遇优厚</span>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-home"></i>
+                    <span>落户门槛降低</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">海南高考指南</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#policy">报考政策</a></li>
+                <li><a href="#conditions">报考条件</a></li>
+                <li><a href="#process">报名流程</a></li>
+                <li><a href="#talent">人才政策</a></li>
+                <li><a href="#advantages">四大优势</a></li>
+                <li><a href="#qr">生成二维码</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="container" style="margin-top: 1rem;">
+        <!-- 政策概览 -->
+        <section id="policy">
+            <div class="section-title">
+                <h2>海南高考政策概览</h2>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">
+                    <i class="fas fa-passport"></i>
+                    <h3>本省户口考生</h3>
+                </div>
+                <div class="card-content">
+                    <p>符合以下任一条件即可报考所有批次：</p>
+                    <ul>
+                        <li>户籍+学籍满3年</li>
+                        <li>高层次人才子女（C类及以上）</li>
+                        <li>驻琼部队现役军人子女</li>
+                    </ul>
+                    <p>仅具有海南户籍但不符合条件者，限报本科B批及大专。</p>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">
+                    <i class="fas fa-plane"></i>
+                    <h3>外省户口考生</h3>
+                </div>
+                <div class="card-content">
+                    <p>海南为外省考生提供清晰路径，社保仅需养老+医疗两项：</p>
+                    <ul>
+                        <li><strong>"3个6"条件：</strong>居住、学籍、社保均满6年，可报考所有批次</li>
+                        <li><strong>"2个12"条件：</strong>居住、学籍均满12年，可报考所有批次</li>
+                        <li><strong>"3个3"条件：</strong>限报本科B批及大专</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>高考模式与时间</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>"3+3"模式：</strong></p>
+                    <ul>
+                        <li>统考3科：语文、数学、英语</li>
+                        <li>选考3科：政、史、地、物、化、生中任选3门</li>
+                    </ul>
+                    <p><strong>考试时间：</strong>每年6月7日-10日</p>
+                    <p><strong>科类选择：</strong>报名时需选定普通类、艺术类或体育类</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 报考条件 -->
+        <section id="conditions" style="background-color: #f8f9fa;">
+            <div class="section-title">
+                <h2>外省考生报考条件详解</h2>
+            </div>
+
+            <div class="policy-table-container">
+                <table class="policy-table">
+                    <thead>
+                        <tr>
+                            <th>条件组合</th>
+                            <th>核心要求</th>
+                            <th>可报考批次</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>"3个6"条件</strong></td>
+                            <td>居住6年 + 学籍6年 + 社保6年（养老+医疗）</td>
+                            <td><span style="color: var(--success); font-weight: bold;">所有批次</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>"2个12"条件</strong></td>
+                            <td>居住12年 + 学籍12年（社保无12年要求）</td>
+                            <td><span style="color: var(--success); font-weight: bold;">所有批次</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>"3个3"条件</strong></td>
+                            <td>居住证满3年、海南初高中学籍3年、父母社保满3年</td>
+                            <td>本科B批及大专</td>
+                        </tr>
+                        <tr>
+                            <td><strong>"3个有"条件</strong></td>
+                            <td>有合法住所、海南高中毕业证、父母有合法职业</td>
+                            <td>本省高职专科</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding: 1rem; background-color: white; border-radius: 8px; border-left: 4px solid var(--accent); box-shadow: var(--shadow);">
+                <h4 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--dark); font-size: 0.95rem;"><i class="fas fa-info-circle" style="color: var(--accent);"></i> 重要说明</h4>
+                <p style="font-size: 0.85rem;">本省考生若不符合本省"不限制"条件，但满足异地"3个6"或"2个12"条件，可参照异地高考政策报考。所有年限计算均按2026年8月31日往前推算，需连续无中断。</p>
+            </div>
+        </section>
+
+        <!-- 报名流程 -->
+        <section id="process">
+            <div class="section-title">
+                <h2>报名流程与时间安排</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 10月31日 - 11月4日</div>
+                        <h4>现场提交材料</h4>
+                        <p>应届生在毕业学校办理；往届生/中职生到市县招生办办理。提交户籍、学籍、居住、社保等连续性证明材料。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="fas fa-laptop"></i> 10月31日 - 11月5日</div>
+                        <h4>网上报名与填报</h4>
+                        <p>登录海南省考试局官网，凭报考卡进入系统填报信息，选择考试科目。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="fas fa-clock"></i> 11月8日 17:30前</div>
+                        <h4>网上缴费截止</h4>
+                        <p>普通类每科38元，艺体类另加160元。逾期视为放弃报名。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="fas fa-file-medical"></i> 次年1-3月</div>
+                        <h4>体检与资格审核</h4>
+                        <p>按要求参加体检，审核结果进行公示，接受社会监督。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1rem; padding: 0.8rem; background: rgba(0, 119, 182, 0.05); border-radius: 8px; font-size: 0.85rem;">
+                <p><strong>注意：</strong>以上时间基于2025年流程，2026年具体时间以官方发布为准。</p>
+            </div>
+        </section>
+
+        <!-- 人才政策 -->
+        <section id="talent" style="background-color: #e6f7ff;">
+            <div class="section-title">
+                <h2>高层次人才子女专项政策</h2>
+            </div>
+
+            <p style="text-align: center; margin-bottom: 1.5rem; font-size: 0.95rem; padding: 0 1rem;">海南对认定的高层次人才（A/B/C/D/E类）子女给予高考政策倾斜，享受报考便利。</p>
+
+            <div class="policy-card">
+                <div class="card-header" style="background: linear-gradient(135deg, var(--success), #1d7a6a);">
+                    <i class="fas fa-crown"></i>
+                    <h3>A/B/C类人才子女</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>报考条件：</strong>子女有海南户口即可</p>
+                    <p><strong>报考批次：</strong><span style="color: var(--success); font-weight: bold;">所有批次</span>，不受常规年限限制</p>
+                    <p><strong>其他待遇：</strong>义务教育免试就近入优质公办学校，高中不受中考"3年初中"限制</p>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header" style="background: var(--gradient);">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>D/E类人才子女</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>报考条件：</strong>需同时满足：</p>
+                    <ul>
+                        <li>海南户口</li>
+                        <li>海南高中学籍并读满年限</li>
+                        <li>父母在琼工作聘期5年以上</li>
+                    </ul>
+                    <p><strong>报考批次：</strong><span style="color: var(--success); font-weight: bold;">所有批次</span></p>
+                    <p><strong>其他待遇：</strong>义务教育优先统筹入学，简化转学插班流程</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding: 1rem; background-color: white; border-radius: 10px; box-shadow: var(--shadow);">
+                <h4 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem; color: var(--dark); font-size: 0.95rem;"><i class="fas fa-lightbulb" style="color: var(--accent);"></i> 人才认定与落户便捷通道</h4>
+                <p style="font-size: 0.85rem; margin-bottom: 0.8rem;">高层次人才可通过"海南政务服务网"或"海易办"APP在线申请认定，流程便捷。落户手续可全程网办，无需提供社保缴纳证明和劳动合同，审批更快。</p>
+                <p style="font-size: 0.85rem;"><strong>人才引进落户条件：</strong>50岁以下全日制大专/本科即可直接落户；毕业5年内全日制大专及以上学历可"先落户后就业"。</p>
+            </div>
+        </section>
+
+        <!-- 四大优势 -->
+        <section id="advantages">
+            <div class="section-title">
+                <h2>选择海南高考的四大优势</h2>
+            </div>
+
+            <div class="advantage">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>政策清晰多元</h3>
+                <p>为本省、外省、人才子女等不同群体提供明确路径，覆盖各类考生需求。</p>
+            </div>
+
+            <div class="advantage">
+                <i class="fas fa-hands-helping"></i>
+                <h3>条件相对友好</h3>
+                <p>异地高考社保仅要求养老、医疗两项；居住证和学籍认定清晰，审核规范透明。</p>
+            </div>
+
+            <div class="advantage">
+                <i class="fas fa-star"></i>
+                <h3>人才待遇优厚</h3>
+                <p>高层次人才子女享受报考便利，配套落户、住房、教育等全链条服务。</p>
+            </div>
+
+            <div class="advantage">
+                <i class="fas fa-home"></i>
+                <h3>落户门槛降低</h3>
+                <p>多种落户渠道，方便家庭快速获得海南户籍，为高考创造条件。</p>
+            </div>
+
+            <div class="reminder-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> 重要提醒</h3>
+                <p>以上政策基于现有文件整理，具体执行以海南省教育厅、考试局当年官方发布为准。请考生及家长密切关注官方通知，提前准备连贯、真实的证明材料。</p>
+                <p>材料造假将取消报名/录取资格，并记入诚信档案！</p>
+            </div>
+        </section>
+
+        <!-- 二维码生成区域 -->
+        <section id="qr" style="background-color: #f8f9fa;">
+            <div class="section-title">
+                <h2>生成本页二维码</h2>
+            </div>
+
+            <div class="qr-section">
+                <h3>如何将此网页制作成二维码</h3>
+
+                <div class="qr-code-container">
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 2rem; color: #ccc;"></i>
+                    </div>
+
+                    <div class="qr-instructions">
+                        <p><strong>操作步骤：</strong></p>
+                        <ol>
+                            <li><strong>获取网页链接：</strong>首先需要将此网页发布到可访问的URL</li>
+                            <li><strong>使用在线工具：</strong>访问二维码生成网站（如草料二维码）</li>
+                            <li><strong>输入网址：</strong>在生成工具中输入您的网页URL</li>
+                            <li><strong>下载二维码：</strong>生成后下载二维码图片</li>
+                            <li><strong>分享使用：</strong>将二维码打印或分享给他人扫码访问</li>
+                        </ol>
+                    </div>
+
+                    <a href="https://cli.im/" target="_blank" class="btn">
+                        <i class="fas fa-external-link-alt"></i> 访问草料二维码生成器
+                    </a>
+
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.8rem; text-align: center;">
+                        提示：由于浏览器安全限制，本页无法直接生成二维码，请使用外部工具。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>官方咨询渠道</h3>
+                    <ul>
+                        <li><i class="fas fa-globe"></i> 海南省考试局官网</li>
+                        <li><i class="fas fa-graduation-cap"></i> 海南省教育厅官网</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 各市县招生办公室</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>相关政策链接</h3>
+                    <ul>
+                        <li><a href="#">海南省高考报名政策</a></li>
+                        <li><a href="#">异地高考报名流程</a></li>
+                        <li><a href="#">高层次人才认定标准</a></li>
+                        <li><a href="#">双落户政策详解</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 咨询热线：0898-12345678</li>
+                        <li><i class="fas fa-envelope"></i> 邮箱：gaokao@hainan.gov.cn</li>
+                        <li><i class="fas fa-map-pin"></i> 地址：海南省海口市国兴大道9号</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2026 海南省教育厅 & 海南省考试局 版权所有 | 本页面内容仅供参考，具体政策以官方发布为准</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            const icon = this.querySelector('i');
+
+            navLinks.classList.toggle('active');
+
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // 关闭移动端菜单
+                    document.getElementById('navLinks').classList.remove('active');
+                    document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+                    document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+
+                    // 计算目标位置（考虑固定导航栏）
+                    const headerOffset = 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 触摸反馈增强
+        const touchElements = document.querySelectorAll('.policy-card, .advantage, .timeline-content, .btn');
+        touchElements.forEach(el => {
+            el.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+
+            el.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 100);
+            });
+        });
+
+        // 页面可见性API - 优化性能
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // 页面不可见时，暂停不必要的动画或请求
+            } else {
+                // 页面可见时，恢复
+            }
+        });
+
+        // 简单的滚动进度指示
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            // 可以在这里添加进度条显示逻辑
+        });
+    </script>
+</body>
+</html>
